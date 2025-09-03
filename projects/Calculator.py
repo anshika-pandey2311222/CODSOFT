@@ -46,15 +46,12 @@ def main():
             print("Thank you for utilizing the calculator. Have a great day!")
             break
 
-        # Validate the user's operation choice
         if operation not in ['1', '2', '3', '4']:
             print("Invalid output! Please select a valid operation (1, 2, 3, or 4).")
             continue  # Restart the loop for a new operation input
 
-        # Prompt the user for two numbers
         num1, num2 = get_numbers()
 
-        # Perform the calculation based on the user's choice
         if operation == '1':
             result = add(num1, num2)
             print(f"\nThe result of {num1} + {num2} = {result}")
@@ -68,7 +65,6 @@ def main():
             result = divide(num1, num2)
             print(f"\nThe result of {num1} / {num2} = {result}")
 
-        # Ask the user if they want to perform another calculation
         print("\n->If you want to perform another calculation, please respond with 'yes'.")
         print("->If you want to exit, respond with 'no'.")
 
@@ -78,4 +74,5 @@ def main():
             break
 
 if __name__ == "__main__":
+
     main()
